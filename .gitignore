@@ -1,0 +1,80 @@
+# Credentials, Secrets & OAuth Tokens (CRITICAL: Never commit to git)
+token.json
+client_secret.json
+auth_url.txt
+*.log
+
+# Sensitive Channel Identity, Business Intel & Strategy (Local Only)
+channel_metadata.json
+channel_state.json
+analytics_summary.json
+*REPORT*.md
+*ANALYTICS*.md
+session.md
+docs/
+production/
+production_pipeline.py
+
+# Proprietary Studio Engines, Pipelines & Automation (Local Only)
+studio/
+studio.py
+crates/
+Cargo.toml
+Cargo.lock
+target/
+channel_sync_manager.py
+youtube_api_uploader.py
+run_pipeline_scheduled.py
+seo_scheduler.py
+audio_engine.py
+audio_synthesizer.py
+vedic_audio_processor.py
+vedic_downloader.py
+generate_navratri_shorts.py
+generate_particles.py
+make_live_thumb.py
+media_builder.py
+config.py
+antigravity-cua/
+live_system/bhajan_live_streamer.py
+live_system/live_streamer.py
+live_system/live_visual_engine.py
+live_system/live_audio_library.py
+
+# Channel & Local Media Assets
+assets/channel_logo_*.*
+assets/channel_banner_*.*
+assets/youtube_live_*.*
+assets/navratri_*.*
+assets/*cutout*.*
+assets/*mandala*.*
+assets/*lotus*.*
+assets/*temple_aarti*.*
+assets/*sanctum*.*
+assets/*mountain*.*
+assets/*cows*.*
+assets/*yamuna*.*
+assets/*darbar*.*
+!assets/lakshmi_divine_lotus.jpg
+!assets/radha_divine_lotus_1790941709730.jpg
+assets/fonts/*Regular*
+
+
+# Output directory & Local Scratch Assets
+output/
+
+# Raw Audio (Keep strictly local)
+raw_audio/
+
+
+# Python Cache, IDE & Build Artefacts
+__pycache__/
+*.py[cod]
+*$py.class
+.tempmediaStorage/
+.user_uploaded/
+.system_generated/
+*.tmp
+
+# Private Agent Customizations & Skills (Local Only)
+.agents/

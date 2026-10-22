@@ -1,0 +1,12 @@
+{
+  "youtube_rtmp_url": "rtmp://a.rtmp.youtube.com/live2",
+  "broadcast_settings": {
+    "resolution": "1920x1080",
+    "fps": 25,
+    "video_bitrate": "2000k",
+    "audio_bitrate": "128k",
+    "preset": "veryfast",
+    "auto_reconnect": true,
+    "reconnect_delay_seconds": 3
+  }
+}

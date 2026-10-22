@@ -1,0 +1,51 @@
+name: 24/7 Vertical Mobile Stream Relay (9:16)
+
+on:
+  schedule:
+    # 24/7 Continuity Watchdog for Shorts (Offset by 30 mins)
+    - cron: '30 */6 * * *'
+  workflow_dispatch:
+    inputs:
+      duration_hours:
+        description: 'Streaming Duration in Hours (5.5h max per runner for continuous relay)'
+        required: true
+        default: '5.5'
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  shorts_broadcast:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350 # 5.8 hours max
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install System Dependencies & Fonts
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-noto-core fonts-deva
+
+
+      - name: Launch 9:16 Vertical Mobile Stream Relay
+        env:
+          YOUTUBE_SHORTS_STREAM_KEY: ${{ secrets.YOUTUBE_SHORTS_STREAM_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+          HOURS: ${{ inputs.duration_hours || '5.5' }}
+        run: |
+          echo "=========================================================="
+          echo "STARTING 24/7 VERTICAL MOBILE STREAM RELAY ENGINE"
+          echo "Resolution: 1080x1920 (9:16 Vertical)"
+          echo "Allocated Session Duration: $HOURS hours"
+          echo "=========================================================="
+          
+          python live_system/shorts_live_streamer.py --hours "$HOURS"
