@@ -72,74 +72,56 @@ CHAT_ENGAGEMENT_PROMPTS = [
     "माँ महालक्ष्मी सभी भक्तों की मनोकामना पूर्ण करें - ॐ श्रीं नमः"
 ]
 
-# Track Metadata Repository (Prioritizing 24/7 Vedic Chanting & Meditation Sanctuary)
+# Track Metadata Repository (100% Original Copyright-Free Procedural Masters)
 TRACK_CATALOG = {
-    # --- 24/7 SACRED VEDIC 432 HZ MEDITATION SANCTUARY ---
-    "ganesh_atharvashirsha": {
-        "title_hindi": "श्री गणेश अथर्वशीर्षम् (विघ्नहर्ता ध्यान)",
-        "subtitle": "Shree Ganesh Atharvashirsha | 432 Hz Sacred Morning Recitation",
-        "images": [ASSETS_DIR / "ganesha_divine_temple.jpg"],
+    "pratah_shanti_dhyan": {
+        "title_hindi": "प्रातः शांति एवं पावन समर्पण (प्रकृति एवं मन्दिर ध्यान)",
+        "subtitle": "Morning Devotional Peace | Pure Original 432 Hz Sanctuary Soundscape",
+        "images": [
+            ASSETS_DIR / "ganesha_divine_temple.jpg",
+            ASSETS_DIR / "hanuman_sanjeevani_dawn_1080p.jpg",
+            ASSETS_DIR / "lakshmi_divine_lotus.jpg"
+        ],
         "category": "morning"
-    },
-    "sri_suktam": {
-        "title_hindi": "ऋग्वेदोक्त श्री सूक्तम् (महालक्ष्मी ध्यान)",
-        "subtitle": "Sri Suktam | 432 Hz Divine Wealth, Prosperity & Positive Energy",
-        "images": [ASSETS_DIR / "lakshmi_divine_lotus.jpg"],
-        "category": "afternoon"
-    },
-    "purusha_suktam": {
-        "title_hindi": "ऋग्वेदोक्त पुरुष सूक्तम् (श्री नारायण ध्यान)",
-        "subtitle": "Purusha Suktam | 432 Hz Cosmic Peace & Higher Consciousness",
-        "images": [ASSETS_DIR / "vishnu_sheshnaag_cosmic.jpg"],
-        "category": "afternoon"
-    },
-    "sivopasana": {
-        "title_hindi": "शिवोपनिषत् / शिवोपासना (महादेव ध्यान)",
-        "subtitle": "Sivopasana | 432 Hz Mount Kailash Cosmic Silence & Har Har Mahadev",
-        "images": [ASSETS_DIR / "shiva_kailash_dhyan_1790941742560.jpg"],
-        "category": "night"
     },
     "krishna_bansuri": {
-        "title_hindi": "श्री कृष्ण बांसुरी ध्यान एवं शांति",
-        "subtitle": "Krishna Divine Flute | 432 Hz Deep Sleep Healing & Meditation",
-        "images": [ASSETS_DIR / "krishna_divine_flute_1790941691575.jpg"],
+        "title_hindi": "श्री कृष्ण पावन वंशी ध्यान (राग भूपाली बांसुरी)",
+        "subtitle": "Shri Krishna Bansuri Meditation | Pure Original 432 Hz Healing Melody",
+        "images": [
+            ASSETS_DIR / "krishna_divine_flute_1790941691575.jpg",
+            ASSETS_DIR / "krishna_vrindavan_yamuna_1790946366975.jpg",
+            ASSETS_DIR / "krishna_govardhan_cows_1790946404115.jpg"
+        ],
+        "category": "afternoon"
+    },
+    "sandhya_yaman_dhyan": {
+        "title_hindi": "सांध्य दिव्य ध्यान एवं मन्दिर घण्टियाँ (राग यमन)",
+        "subtitle": "Sandhya Divine Meditation | Pure Original 432 Hz Twilight Bells & Flute",
+        "images": [
+            ASSETS_DIR / "lakshmi_temple_aarti.jpg",
+            ASSETS_DIR / "mata_live_darbar_16x9.jpg",
+            ASSETS_DIR / "durga_divine_simhavahini.jpg"
+        ],
+        "category": "evening"
+    },
+    "cosmic_om_136hz": {
+        "title_hindi": "ॐ नाद एवं महा चेतना ध्यान (136.1Hz पृथ्वी अनुनाद)",
+        "subtitle": "Cosmic Om Earth Resonance | Pure Original 136.1 Hz Sacred Meditation",
+        "images": [
+            ASSETS_DIR / "vishnu_sheshnaag_cosmic.jpg",
+            ASSETS_DIR / "purusha_suktam_cosmic_1080p.jpg",
+            ASSETS_DIR / "narayana_cosmic_ocean_1080p.jpg"
+        ],
         "category": "night"
     },
-    "shantimantrah": {
-        "title_hindi": "वैदिक शान्तिमन्त्राः (विश्व शान्ति ध्यान)",
-        "subtitle": "Vedic Shanti Mantras | 432 Hz Universal Peace & Deep Sleep Healing",
-        "images": [ASSETS_DIR / "radha_divine_lotus_1790941709730.jpg"],
+    "shiva_kailash_dhyan": {
+        "title_hindi": "कैलाश मौन एवं शिव ध्यान (राग शिवरंजनी शांति)",
+        "subtitle": "Kailash Cosmic Silence & Shiva Dhyan | Pure Original 432 Hz Soundscape",
+        "images": [
+            ASSETS_DIR / "shiva_kailash_dhyan_1790941742560.jpg",
+            ASSETS_DIR / "vedic_kailash_peace_1080p.jpg"
+        ],
         "category": "night"
-    },
-    "durga_suktam": {
-        "title_hindi": "ऋग्वेदोक्त दुर्गा सूक्तम् (अभय एवं सुरक्षा)",
-        "subtitle": "Durga Suktam | 432 Hz Divine Protection & Inner Courage",
-        "images": [ASSETS_DIR / "durga_divine_simhavahini.jpg"],
-        "category": "evening"
-    },
-    "devi_suktam": {
-        "title_hindi": "ऋग्वेदोक्त देवी सूक्तम् (वाक् सूक्त)",
-        "subtitle": "Devi Suktam | 432 Hz Divine Mother Consciousness & Power",
-        "images": [ASSETS_DIR / "durga_divine_simhavahini.jpg"],
-        "category": "evening"
-    },
-    "saraswati_suktam": {
-        "title_hindi": "ऋग्वेदोक्त सरस्वती सूक्तम् (विद्या एवं ज्ञान)",
-        "subtitle": "Saraswati Suktam | 432 Hz Wisdom, Focus & Intellect Meditation",
-        "images": [ASSETS_DIR / "lakshmi_divine_lotus.jpg"],
-        "category": "morning"
-    },
-    "narayana_suktam": {
-        "title_hindi": "यजुर्वेदीय नारायण सूक्तम् (परम पुरुष ध्यान)",
-        "subtitle": "Narayana Suktam | 432 Hz Supreme Spiritual Energy & Dhyan",
-        "images": [ASSETS_DIR / "vishnu_sheshnaag_cosmic.jpg"],
-        "category": "evening"
-    },
-    "mantrapushpam": {
-        "title_hindi": "तैत्तिरीयोपनिषद् मन्त्रपुष्पम् (पावन अर्पण)",
-        "subtitle": "Mantrapushpam | 432 Hz Vedic Devotional Offering & Purity",
-        "images": [ASSETS_DIR / "lakshmi_divine_lotus.jpg"],
-        "category": "morning"
     }
 }
 
@@ -231,9 +213,9 @@ def build_filter_graph(image_paths: list[Path], info: dict, duration: float, pro
         f"[base_rgb][p_rgb]blend=all_mode='addition':all_opacity=0.35,format=yuv420p[blended];"
     )
     
-    t_hindi = info["title_hindi"].replace("'", "").replace(":", "-")
-    t_sub = info["subtitle"].replace("'", "").replace(":", "-")
-    p_clean = prompt_text.replace("'", "").replace(":", "-")
+    t_hindi = info["title_hindi"].replace("'", "").replace(":", "-").replace("%", "")
+    t_sub = info["subtitle"].replace("'", "").replace(":", "-").replace("%", "")
+    p_clean = prompt_text.replace("'", "").replace(":", "-").replace("%", "")
     
     # OSD Graphics (Big Bold LIVE Badge, Prominent Centered Chat Prompt, Clean Top-Right)
     chains.append(
@@ -322,9 +304,9 @@ def run_master_stream(max_hours: float = None, is_preview: bool = False):
             relay_triggered = True
             
         if is_preview:
-            # For 24/7 preview, showcase the opening track: Shree Ganesh Atharvashirsha
-            p_vedic = VEDIC_SEGMENTS_DIR / "ganesh_atharvashirsha_432hz.mp3"
-            playlist = [{"key": "ganesh_atharvashirsha", "path": p_vedic, "info": TRACK_CATALOG["ganesh_atharvashirsha"]}]
+            # For 24/7 preview, showcase the opening 100% original track: Krishna Bansuri
+            p_track = VEDIC_SEGMENTS_DIR / "krishna_bansuri_432hz.mp3"
+            playlist = [{"key": "krishna_bansuri", "path": p_track, "info": TRACK_CATALOG["krishna_bansuri"]}]
         else:
             playlist = resolve_day_parting_playlist()
         print(f"\n--- Starting Devotional Cycle #{cycle} ({len(playlist)} Curated Segments) ---")

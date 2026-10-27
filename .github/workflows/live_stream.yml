@@ -1,9 +1,9 @@
 name: 24/7 Cloud Broadcast Relay (16:9)
 
 on:
-  schedule:
-    # 24/7 Continuity Watchdog (Triggers every 6 hours as a dead-man fail-safe)
-    - cron: '0 */6 * * *'
+  # schedule:
+  #   # 24/7 Continuity Watchdog (Temporarily disabled pending copyright strike resolution & 100% original catalog migration)
+  #   - cron: '0 */6 * * *'
   workflow_dispatch:
     inputs:
       duration_hours:
@@ -33,7 +33,11 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq ffmpeg fonts-noto-core fonts-deva
+          pip install numpy scipy
 
+      - name: Synthesize 100% Original Audio Catalog
+        run: |
+          python generate_original_catalog.py
 
       - name: Launch Cloud Media Broadcast Relay
         env:

@@ -63,8 +63,9 @@ assets/fonts/*Regular*
 # Output directory & Local Scratch Assets
 output/
 
-# Raw Audio (Keep strictly local)
+# Raw Audio & Stream Segments (Keep strictly local, synthesized on-demand in cloud)
 raw_audio/
+live_system/stream_segments/
 
 
 # Python Cache, IDE & Build Artefacts

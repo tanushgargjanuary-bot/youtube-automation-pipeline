@@ -64,39 +64,29 @@ CHAT_ENGAGEMENT_PROMPTS = [
 ]
 
 SHORTS_CATALOG = {
-    "ganesh_atharvashirsha": {
-        "title_hindi": "श्री गणेश अथर्वशीर्षम् (विघ्नहर्ता ध्यान)",
-        "subtitle": "Shree Ganesh Atharvashirsha | 432 Hz",
-        "images": [ASSETS_DIR / "ganesha_divine_temple.jpg"]
-    },
-    "sri_suktam": {
-        "title_hindi": "ऋग्वेदोक्त श्री सूक्तम् (महालक्ष्मी ध्यान)",
-        "subtitle": "Sri Suktam | Divine Wealth & Peace | 432 Hz",
-        "images": [ASSETS_DIR / "lakshmi_divine_lotus.jpg"]
-    },
-    "purusha_suktam": {
-        "title_hindi": "ऋग्वेदोक्त पुरुष सूक्तम् (नारायण ध्यान)",
-        "subtitle": "Purusha Suktam | Cosmic Consciousness | 432 Hz",
-        "images": [ASSETS_DIR / "vishnu_sheshnaag_cosmic.jpg"]
-    },
     "krishna_bansuri": {
-        "title_hindi": "श्री कृष्ण बांसुरी ध्यान एवं शांति",
-        "subtitle": "Krishna Divine Flute | Deep Meditation | 432 Hz",
-        "images": [ASSETS_DIR / "krishna_divine_flute_1790941691575.jpg"]
+        "title_hindi": "श्री कृष्ण पावन वंशी ध्यान",
+        "subtitle": "Krishna Divine Flute | Pure Original 432 Hz",
+        "images": [ASSETS_DIR / "krishna_vrindavan_vertical.jpg"]
     },
-    "saraswati_suktam": {
-        "title_hindi": "ऋग्वेदोक्त सरस्वती सूक्तम् (विद्या एवं ज्ञान)",
-        "subtitle": "Saraswati Suktam | Wisdom & Intellect | 432 Hz",
-        "images": [ASSETS_DIR / "lakshmi_divine_lotus.jpg"]
+    "shiva_kailash_dhyan": {
+        "title_hindi": "कैलाश मौन एवं शिव ध्यान",
+        "subtitle": "Shiva Kailash Dhyan | Pure Original 432 Hz",
+        "images": [ASSETS_DIR / "shiva_kailash_vertical_1080x1920.jpg"]
     },
-    "narayana_suktam": {
-        "title_hindi": "यजुर्वेदीय नारायण सूक्तम् (परम पुरुष ध्यान)",
-        "subtitle": "Narayana Suktam | Supreme Energy | 432 Hz",
+    "pratah_shanti_dhyan": {
+        "title_hindi": "प्रातः शांति एवं पावन समर्पण",
+        "subtitle": "Morning Sanctuary Peace | Pure Original 432 Hz",
+        "images": [ASSETS_DIR / "ganesh_golden_sanctum_vertical.jpg"]
+    },
+    "cosmic_om_136hz": {
+        "title_hindi": "ॐ नाद एवं महा चेतना ध्यान",
+        "subtitle": "Cosmic Om Earth Resonance | Pure Original 136.1 Hz",
         "images": [ASSETS_DIR / "vishnu_sheshnaag_cosmic.jpg"]
     },
-    "mantrapushpam": {
-        "title_hindi": "तैत्तिरीयोपनिषद् मन्त्रपुष्पम् (पावन अर्पण)",
-        "subtitle": "Mantrapushpam | Devotional Offering | 432 Hz",
+    "sandhya_yaman_dhyan": {
+        "title_hindi": "सांध्य दिव्य ध्यान एवं मन्दिर घण्टियाँ",
+        "subtitle": "Sandhya Divine Meditation | Pure Original 432 Hz",
         "images": [ASSETS_DIR / "lakshmi_divine_lotus.jpg"]
     }
 }
@@ -140,9 +130,9 @@ def build_vertical_filter_graph(image_paths: list[Path], info: dict, duration: f
         f"[base_rgb][p_rgb]blend=all_mode='addition':all_opacity=0.35,format=yuv420p[blended];"
     )
     
-    t_hindi = info["title_hindi"].replace("'", "").replace(":", "-")
-    t_sub = info["subtitle"].replace("'", "").replace(":", "-")
-    p_clean = prompt_text.replace("'", "").replace(":", "-")
+    t_hindi = info["title_hindi"].replace("'", "").replace(":", "-").replace("%", "")
+    t_sub = info["subtitle"].replace("'", "").replace(":", "-").replace("%", "")
+    p_clean = prompt_text.replace("'", "").replace(":", "-").replace("%", "")
     
     # Vertical Safe-Zone OSD (Optimized for Mobile Shorts Swipe Feed)
     chains.append(

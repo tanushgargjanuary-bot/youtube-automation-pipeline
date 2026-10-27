@@ -1,9 +1,9 @@
 name: 24/7 Vertical Mobile Stream Relay (9:16)
 
 on:
-  schedule:
-    # 24/7 Continuity Watchdog for Shorts (Offset by 30 mins)
-    - cron: '30 */6 * * *'
+  # schedule:
+  #   # 24/7 Continuity Watchdog for Shorts (Offset by 30 mins)
+  #   - cron: '30 */6 * * *'
   workflow_dispatch:
     inputs:
       duration_hours:
@@ -33,7 +33,11 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq ffmpeg fonts-noto-core fonts-deva
+          pip install numpy scipy
 
+      - name: Synthesize 100% Original Audio Catalog
+        run: |
+          python generate_original_catalog.py
 
       - name: Launch 9:16 Vertical Mobile Stream Relay
         env:
